@@ -96,17 +96,7 @@ python scripts/tune_lstm_kerastuner.py
 
 ---
 
-### Step 4: Evaluate Models
-
-Open Jupyter Notebook:
-
-```bash
-notebooks/comparison_dashboard.ipynb
-```
-
----
-
-### Step 5: Launch Streamlit App
+### Step 4: Launch Streamlit App
 
 ```bash
 streamlit run streamlit_app/app.py
@@ -114,7 +104,7 @@ streamlit run streamlit_app/app.py
 
 ---
 
-### Step 6: Run with Docker
+### Step 5: Run with Docker
 
 ```bash
 docker build -t sentiment-app .
