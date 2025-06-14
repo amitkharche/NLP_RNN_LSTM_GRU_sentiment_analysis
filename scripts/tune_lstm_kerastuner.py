@@ -33,3 +33,13 @@ tuner.search(x_train, y_train, epochs=5, validation_split=0.2)
 best_hps = tuner.get_best_hyperparameters(num_trials=1)[0]
 print(f"Best embedding output: {best_hps.get('embedding_output')}")
 print(f"Best LSTM units: {best_hps.get('lstm_units')}")
+
+# Build the best model
+model = tuner.hypermodel.build(best_hps)
+
+# Train it fully (you can use more epochs now)
+model.fit(x_train, y_train, epochs=2, validation_split=0.2)
+
+model.save("models/best_lstm_model.h5")
+
+

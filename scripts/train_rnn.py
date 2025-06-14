@@ -21,7 +21,7 @@ model = Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(x_train, y_train, epochs=3, batch_size=64, validation_split=0.2)
-model.save("../models/rnn_model.h5")
+model.save("models/rnn_model.h5")
 
 y_pred = (model.predict(x_test) > 0.5).astype("int32")
 print(classification_report(y_test, y_pred))

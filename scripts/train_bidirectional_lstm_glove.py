@@ -19,7 +19,7 @@ x_test = pad_sequences(x_test, maxlen=maxlen)
 
 # Load GloVe embeddings
 embeddings_index = {}
-glove_path = "../data/glove.6B.100d.txt"
+glove_path = "data/glove.6B.100d.txt"
 with open(glove_path, encoding='utf-8') as f:
     for line in f:
         values = line.split()
@@ -49,7 +49,8 @@ model = Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(x_train, y_train, epochs=3, batch_size=64, validation_split=0.2)
-model.save("../models/bidirectional_lstm_glove.h5")
+model.save("models/bidirectional_lstm_glove.h5")
 
 y_pred = (model.predict(x_test) > 0.5).astype("int32")
 print(classification_report(y_test, y_pred))
+

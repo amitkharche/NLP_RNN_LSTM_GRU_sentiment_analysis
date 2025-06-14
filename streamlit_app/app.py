@@ -10,7 +10,8 @@ model_paths = {
     "LSTM": "../models/lstm_model.h5",
     "GRU": "../models/gru_model.h5",
     "Bidirectional LSTM (GloVe)": "../models/bidirectional_lstm_glove.h5",
-    "Bidirectional GRU (GloVe)": "../models/bidirectional_gru_glove.h5"
+    "Bidirectional GRU (GloVe)": "../models/bidirectional_gru_glove.h5",
+    "Best LSTSM": "../models/best_lstm_model.h5"
 }
 
 # Load IMDB word index
