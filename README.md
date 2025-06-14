@@ -1,15 +1,17 @@
 
 ---
 
-# 🔍 NLP RNN Sentiment Analysis – IMDB Movie Reviews
+# NLP Sentiment Analysis on IMDB Movie Reviews  
+### Using RNN | LSTM | GRU | BiLSTM | BiGRU | Best LSTM (KerasTuner)
 
-## 🎯 Business Objective
+
+## Business Objective
 
 This project classifies IMDB movie reviews as **Positive** or **Negative** using various Recurrent Neural Network (RNN) architectures. It simulates real-world sentiment analysis for platforms aiming to monitor user opinion at scale—enhancing recommendation systems, moderation, and marketing analytics.
 
 ---
 
-## 📚 Dataset
+## Dataset
 
 * **Source**: IMDB Movie Review Dataset (Keras built-in)
 * **Task**: Binary Sentiment Classification
@@ -19,7 +21,7 @@ This project classifies IMDB movie reviews as **Positive** or **Negative** using
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 1. **Data Preprocessing**
 
@@ -51,7 +53,7 @@ This project classifies IMDB movie reviews as **Positive** or **Negative** using
 
 ---
 
-## 🧠 Models Used
+## Models Used
 
 | Model Type             | Architecture                   | Key Layers/Parameters   |
 | ---------------------- | ------------------------------ | ----------------------- |
@@ -64,15 +66,15 @@ This project classifies IMDB movie reviews as **Positive** or **Negative** using
 
 ---
 
-## 💻 How to Run This Project
+## How to Run This Project
 
-### 🔧 Step 1: Install Dependencies
+### Step 1: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 🗂️ Step 2: Download GloVe Embeddings
+### Step 2: Download GloVe Embeddings
 
 Download GloVe (100D) from:
 [http://nlp.stanford.edu/data/glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip)
@@ -81,7 +83,7 @@ Extract and place `glove.6B.100d.txt` in the `data/` directory.
 
 ---
 
-### 🏋️ Step 3: Train Models
+### Step 3: Train Models
 
 ```bash
 python scripts/train_rnn.py
@@ -94,7 +96,7 @@ python scripts/tune_lstm_kerastuner.py
 
 ---
 
-### 📊 Step 4: Evaluate Models
+### Step 4: Evaluate Models
 
 Open Jupyter Notebook:
 
@@ -104,7 +106,7 @@ notebooks/comparison_dashboard.ipynb
 
 ---
 
-### 🌐 Step 5: Launch Streamlit App
+### Step 5: Launch Streamlit App
 
 ```bash
 streamlit run streamlit_app/app.py
@@ -112,7 +114,7 @@ streamlit run streamlit_app/app.py
 
 ---
 
-### 🐳 Step 6: Run with Docker
+### Step 6: Run with Docker
 
 ```bash
 docker build -t sentiment-app .
@@ -121,7 +123,7 @@ docker run -p 8501:8501 sentiment-app
 
 ---
 
-## 📦 Folder Structure
+## Folder Structure
 
 ```
 nlp_rnn_sentiment_analysis/
@@ -149,7 +151,7 @@ nlp_rnn_sentiment_analysis/
 
 ---
 
-## 📈 Evaluation Output
+## Evaluation Output
 
 * Printed classification reports
 * Confusion matrix for each model
@@ -157,7 +159,7 @@ nlp_rnn_sentiment_analysis/
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 * Integrate BERT using Hugging Face Transformers
 * Explainability tools like **LIME** or **SHAP**
@@ -169,20 +171,20 @@ nlp_rnn_sentiment_analysis/
 
 ---
 
-## 🚀 Advanced Models & Techniques
+## Advanced Models & Techniques
 
-### 🔁 Bidirectional RNNs
+### Bidirectional RNNs
 
 * **BiLSTM & BiGRU** capture past and future context.
 * Powered by **pre-trained GloVe (100D)** word vectors.
 * Embeddings are frozen for stable semantics.
 
-### 🧠 Word Embeddings (GloVe)
+### Word Embeddings (GloVe)
 
 * GloVe vectors help understand word similarity (e.g., "good" ≈ "excellent")
 * Source: Stanford NLP ([Download link](http://nlp.stanford.edu/data/glove.6B.zip))
 
-### 🎯 Hyperparameter Tuning
+### Hyperparameter Tuning
 
 * Used **KerasTuner Hyperband** to optimize:
 
@@ -191,7 +193,7 @@ nlp_rnn_sentiment_analysis/
 
 ---
 
-## 📈 Evaluation Metrics Used
+## Evaluation Metrics Used
 
 Each model was evaluated using:
 
@@ -201,11 +203,11 @@ Each model was evaluated using:
 * F1-Score
 * Confusion Matrix
 
-> 📊 Compare results in: `notebooks/comparison_dashboard.ipynb`
+> Compare results in: `notebooks/comparison_dashboard.ipynb`
 
 ---
 
-## 📎 Repository
+## Repository
 
 Clone this project:
 
@@ -216,7 +218,7 @@ cd NLP_RNN_LSTM_GRU_sentiment_analysis
 
 ---
 
-## 🏷️ Tags
+## Tags
 
 `NLP` `Sentiment Analysis` `IMDB` `RNN` `LSTM` `GRU`
 `Bidirectional` `GloVe` `KerasTuner` `Streamlit` `Docker`
